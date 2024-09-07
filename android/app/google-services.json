@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "22819358189",
+    "project_id": "trendify-d0cc0",
+    "storage_bucket": "trendify-d0cc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22819358189:android:4f5c18ef69013460b2d3e4",
+        "android_client_info": {
+          "package_name": "com.example.interior_design"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8QpVLhdlIav6AkFAx0NqMzprEcDmvyMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,57 @@
+name: interior_design
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.3.0
+  firebase_auth: ^5.1.4
+  firebase_storage:
+  cloud_firestore: ^5.2.1
+  fluttertoast: ^8.1.2  # Add the latest version of the plugin
+  image_picker: ^0.8.4+8
+  path_provider:
+  permission_handler: ^10.2.0
+  shimmer:
+  cached_network_image: ^3.4.0
+  dio: ^5.6.0
+  shared_preferences: ^2.3.2
+  provider:
+
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/gifs/
+  fonts:
+      - family: EduAustraliaVICWAHand
+        fonts:
+          - asset: assets/fonts/Edu-Regular.ttf
+            weight: 400
+          - asset: assets/fonts/Edu-Medium.ttf
+            weight: 500
+          - asset: assets/fonts/Edu-SemiBold.ttf
+            weight: 600
+          - asset: assets/fonts/Edu-Bold.ttf
+            weight: 700
+
+      - family: Matemasie
+        fonts:
+          - asset: assets/fonts/Matemasie-Regular.ttf
