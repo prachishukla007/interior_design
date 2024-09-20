@@ -30,12 +30,9 @@ class FirestoreDB {
     final User? user = auth.currentUser;
     if (user != null) {
       try {
-        print("Came to add Data");
         var document = store.collection(usersCollection).doc(user.uid);
-        print("userDetails: ${userDetails.toJson()}");
 
-        document.set(userDetails.toJson());
-        print("Done");
+        document.set(userDetails.toJson(), SetOptions(merge: true));
 
         FirebaseStore.instance.createUserFolder(user.uid);
       } catch (e) {

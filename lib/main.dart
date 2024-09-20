@@ -38,3 +38,44 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
+// import 'dart:ui';
+//
+// import 'package:flutter/material.dart';
+//
+// import 'examples/adapter_view.dart';
+// import 'examples/everything_view.dart';
+// import 'examples/info_view.dart';
+// import 'examples/playground_view.dart';
+// import 'examples/visual_view.dart';
+//
+// void main() {
+//   runApp(const MyApp());
+//   _loadShader(); // this is a touch hacky, but works for now.
+// }
+//
+// Future<void> _loadShader() async {
+//   return FragmentProgram.fromAsset('assets/shaders/shader.frag').then(
+//           (FragmentProgram prgm) {
+//         EverythingView.shader = prgm.fragmentShader();
+//       }, onError: (Object error, StackTrace stackTrace) {
+//     FlutterError.reportError(
+//         FlutterErrorDetails(exception: error, stack: stackTrace));
+//   });
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       title: 'Flutter Animate Demo',
+//       debugShowCheckedModeBanner: false,
+//       home: FlutterAnimateExample(),
+//     );
+//   }
+// }
+//
+// // this is a very quick and dirty example.

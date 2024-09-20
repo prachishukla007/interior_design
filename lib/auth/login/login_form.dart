@@ -124,6 +124,7 @@ class _LoginFormState extends State<LoginForm> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(IconConstant.bgImage5),
+              opacity: 0.8,
               fit: BoxFit.cover,
             ),
           ),

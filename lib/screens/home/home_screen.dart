@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final firestore = FirebaseFirestore.instance;
       final imageRef = firestore
           .collection('items')
-          .doc('book_shelf')
+          .doc('curtains')
           .collection('itemsImages')
           .doc();
       await imageRef.set({
@@ -70,9 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> handleImageUpload() async {
     try {
-      final imageData = await loadAsset("assets/images/bg-image26.jpeg");
+      final imageData = await loadAsset("assets/images/Capture-removebg-preview (1).png");
       final downloadUrl = await uploadImageToFirebase(imageData,
-          'items/book_shelf/book_shelf${DateTime.now().millisecondsSinceEpoch}');
+          'items/curtains/curtains${DateTime.now().millisecondsSinceEpoch}');
       await storeImageUrlInFirestore(downloadUrl);
       print('Image URL stored in Firestore: $downloadUrl');
     } catch (e) {
@@ -150,6 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
     String? userId = _auth.currentUser?.uid;
     final ListResult result =
         await _storage.ref('users_posts/$userId/my_collection/').listAll();
+
     final List<String> urls = [];
 
     for (var ref in result.items) {

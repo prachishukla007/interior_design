@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:interior_design/arguments/ar_view_args.dart';
 import 'package:interior_design/auth/login/login_form.dart';
 import 'package:interior_design/auth/register/register.dart';
+import 'package:interior_design/screens/layouts/layouts_screen.dart';
 import 'package:interior_design/screens/splash/splash_screen.dart';
 import 'package:interior_design/screens/user_uploads/user_uploads_screen.dart';
 import 'package:interior_design/wrapper/auth_wrapper.dart';
@@ -8,6 +10,7 @@ import 'package:interior_design/wrapper/auth_wrapper.dart';
 import '../arguments/image_preview_args.dart';
 import '../arguments/item_preview_args.dart';
 import '../arguments/save_image_args.dart';
+import '../screens/ar_screen/ar_core_screen.dart';
 import '../screens/save_image/save_image_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/image_preview/image_preview_screen.dart';
@@ -23,6 +26,8 @@ class Routes {
   static const String imagePreview = '/imagePreview';
   static const String itemPreview = '/itemPreview';
   static const String saveImage = '/saveImage';
+  static const String ar = '/ar';
+  static const String layouts = '/layouts';
   // static const String display = '/displayPicture';
 
 
@@ -40,17 +45,22 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case upload:
         return MaterialPageRoute(builder: (_) => const UserUploadsScreen());
+      case ar:
+        final args = settings.arguments as ARViewArgs;
+        return MaterialPageRoute(builder: (_) => ArViewScreen(items: args.imageUrls));
+        case layouts:
+        return MaterialPageRoute(builder: (_) => const ARLayouts());
       case imagePreview:
         final args = settings.arguments as ImagePreviewArguments;
         return MaterialPageRoute(
           builder: (_) => ImagePreviewPage(open: args.open),
         );
-        case itemPreview:
+      case itemPreview:
         final args = settings.arguments as ItemPreviewArgs;
         return MaterialPageRoute(
           builder: (_) => PreviewScreen(name: args.name, itemImages: args.itemImages),
         );
-        case saveImage:
+      case saveImage:
         final args = settings.arguments as SaveImageArguments;
         return MaterialPageRoute(
           builder: (_) => SaveImagePage(imagePath: args.imagePath, uploadedImage: args.uploadedImage),
